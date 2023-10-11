@@ -1,7 +1,21 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+ function reverse(word) {
+    const wordArr = word.split('')
+    const reversedArr = wordArr.reverse()
+    const reversedWord = reversedArr.join("")
+    return reversedWord
 }
 
+function isPalindrome(word) {
+  const reversedWord = reverse(word)
+  if (word === reversedWord) {
+    return true;
+
+  } else {
+    return false;
+  }
+}
+console.log(isPalindrome("mom"))
+  console.log(isPalindrome("rebot"))
 /* 
   Add your pseudocode here
 */
